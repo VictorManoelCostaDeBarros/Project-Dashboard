@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="topo">
+            <h3>DankiCode</h3>
+        </div><!--topo-->
+
+        <div class="menu">
+            <ul>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Home</a></li>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Conteúdo</a></li>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Estatistica</a></li>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Configurações</a></li>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Dúvidas</a></li>
+                <li><i class="fas fa-angle-double-right"></i><a href=""> Usuários</a></li>
+            </ul>
+        </div><!--menu-->
+    </div><!--sidebar-->
+    <!-- FIM DA SIDEBAR -->
+
+    <div class="main-content">
+        <header>
+            <div class="pesquisa-campo">
+                <div class="icone-pesquisa"><i class="fas fa-search"></i></div><form><input type="text"></form>
+            </div><!--pesquisa-campo-->
+
+            <div class="icone-alerta">
+                <p>2</p>
+                <i class="fas fa-bell"></i>
+            </div><!--icone-alerta-->
+
+            <div class="nome-usuario"><h2><i class="fas fa-align-justify"></i></h2></div>
+
+            <div class="clear"></div>
+        </header>
+
+        <div class="content1">
+            <div class="panel">
+                <h2>Bem-vindo, Victor!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet quis orci vitae facilisis. Aenean aliquam lacinia ultricies. Vivamus lobortis imperdiet maximus. Cras bibendum lacus vitae magna consectetur, vitae hendrerit odio viverra. Sed hendrerit arcu eu feugiat sagittis. Fusce lorem orci, vestibulum ut sem at, hendrerit feugiat massa. Quisque commodo, est in lacinia convallis, odio sapien vestibulum elit, nec ornare arcu felis in sem. Maecenas nulla urna, elementum id lobortis tincidunt, tempus id purus. Aliquam lacus felis, sagittis non velit at, mollis dignissim augue. Phasellus eu ornare nisl.</p>
+            </div><!--panel-->
+
+            <div style="width: 49%;margin-right: 1%;" class="panel">
+                <h2>Bem-vindo, Victor!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet quis orci vitae facilisis. Aenean aliquam lacinia ultricies. Vivamus lobortis imperdiet maximus. Cras bibendum lacus vitae magna consectetur, vitae hendrerit odio viverra. Sed hendrerit arcu eu feugiat sagittis. Fusce lorem orci, vestibulum ut sem at, hendrerit feugiat massa. Quisque commodo, est in lacinia convallis, odio sapien vestibulum elit, nec ornare arcu felis in sem. Maecenas nulla urna, elementum id lobortis tincidunt, tempus id purus. Aliquam lacus felis, sagittis non velit at, mollis dignissim augue. Phasellus eu ornare nisl.</p>
+            </div><!--panel-->
+
+            <div style="width: 49%;margin-left: 1%;" class="panel">
+                <h2>Bem-vindo, Victor!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet quis orci vitae facilisis. Aenean aliquam lacinia ultricies. Vivamus lobortis imperdiet maximus. Cras bibendum lacus vitae magna consectetur, vitae hendrerit odio viverra. Sed hendrerit arcu eu feugiat sagittis. Fusce lorem orci, vestibulum ut sem at, hendrerit feugiat massa. Quisque commodo, est in lacinia convallis, odio sapien vestibulum elit, nec ornare arcu felis in sem. Maecenas nulla urna, elementum id lobortis tincidunt, tempus id purus. Aliquam lacus felis, sagittis non velit at, mollis dignissim augue. Phasellus eu ornare nisl.</p>
+            </div><!--panel-->
+            <div class="clear"></div>
+        </div><!--content1-->
+
+        <div class="ultimas-atividades">
+            <div class="atividades-topo">
+                <h2>Últimas atividades</h2>
+            </div><!--atividades-topo-->
+              <br>  
+            <div class="atividade-resgistro">
+                <div class="circle-atividade"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div>
+
+            <div class="atividade-resgistro">
+                <div class="circle-atividade"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div>
+
+            <div class="atividade-resgistro">
+                <div class="circle-atividade"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma nova <b>página</b> foi inserida</p>
+            </div>
+            
+        </div>
+    </div><!--main-content-->
+    <div class="clear"></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var windowWidth = $(window)[0].innerWidth
+            if (windowWidth <= 768) {
+                $('.nome-usuario h2').click(function(){
+                    var el = $('.sidebar')
+                    if (el.is(':visible')) {
+                        el.hide()
+                        $('.main-content').css('left','0')
+                    }else {
+                        el.show()
+                        $('.main-content').css('left','300px')
+                    }
+                })
+            }
+
+            $(window).resize(function(){
+                windowWidth = $(window)[0].innerWidth
+            })
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html, body {
+    background: #FAF9FC;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+div.sidebar {
+    background: #2D3035;
+    height: 100%;
+    width: 300px;
+    float: left;
+}
+
+div.topo {
+    background: #26282D;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+div.topo h3 {
+    color: white;
+    font-weight: normal;
+}
+
+div.menu {
+    padding: 30px;
+}
+
+div.menu ul {
+    list-style-type: none;
+}
+
+div.menu ul li {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #717171;
+}
+
+div.menu ul li:hover i {
+    color: #6d3bbb;
+    transition: 0.6s;
+}
+
+div.menu ul li a {
+    font-size: 18px;
+    color: #717171;
+    text-decoration: none;
+}
+
+div.menu ul li:hover a {
+    color: white;
+    transition: 0.6s;
+}
+
+/* FIM da SIDEBAR */
+
+div.main-content {
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+}
+
+header {
+    height: 80px;
+    background: white;
+    padding: 20px 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pesquisa-campo {
+    float: right;
+}
+
+.icone-pesquisa {
+    background: #d6d6d6;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icone-pesquisa i {
+    position: relative;
+    top: 5px;
+}
+
+.pesquisa-campo form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pesquisa-campo input[type=text] {
+    width: 200px;
+    height: 30px;
+    border-left: 0;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.pesquisa-campo input[type=text]:focus {outline: 0;}
+
+.icone-alerta {
+    cursor: pointer;
+    float: right;
+    margin-right: 28px;
+    background: #FBEDEF;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.icone-alerta p {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    display: inline-block;
+    background: #ED7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.icone-alerta i {
+    line-height: 30px;
+    font-size: 18px;
+    color: #ED7387;
+    font-weight: bold;
+}
+
+.nome-usuario {
+    float: left;
+}
+
+.nome-usuario h2 {
+    font-weight: normal;
+    font-size: 23px;
+    color: #A7A7A7;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+.content1 {
+    float: left;
+    width: 75%;
+    padding: 30px;
+    overflow: auto;
+    height: calc(100% - 80px);
+}
+
+.panel {
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    background: white;
+    border: 2px solid #EBEBEB;
+    padding: 30px;
+}
+
+.panel h2 {
+    color: #7f7f7f;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.panel p {
+    color: #b2b2b2;
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.ultimas-atividades {
+    width: 25%;
+    background: #eaebeb;
+    padding: 20px;
+    float: left;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+
+.atividades-topo h2 {
+    color: #7f7f7f;
+    font-size: 22px;
+    padding: 8px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+}
+
+.atividade-resgistro {
+    padding: 15px 10px;
+    border-left: 1px solid #bbb;
+    position: relative;
+}
+
+.atividade-resgistro h2 {
+    color: #bbb;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.atividade-resgistro p {
+    color: #b2b2b2;
+    font-size: 15px;
+}
+
+.circle-atividade {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #E9ebeb;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar{display: none;position: relative;z-index: 9999;}
+    div.main-content{width: 100%;position: absolute;left: 0;top: 0;}
+}
+
+@media screen and (max-width: 900px) {
+    .ultimas-atividades{display: none;}
+    .content1 {width: 100%;}
+    .panel{width: 100% !important;}
+}
